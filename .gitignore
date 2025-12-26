@@ -1,0 +1,5 @@
+.env
+.env.local
+ted_talks_en.csv
+__pycache__/
+*.pyc

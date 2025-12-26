@@ -1,0 +1,4 @@
+flask
+pinecone
+requests
+python-dotenv
