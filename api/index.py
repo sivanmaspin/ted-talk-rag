@@ -29,6 +29,43 @@ def get_stats():
     return jsonify(RAG_CONFIG)
 
 @app.route("/api/prompt", methods=["POST"])
+def home():
+    return """
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TED Talk RAG Assistant</title>
+        <style>
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f8f9fa; color: #333; }
+            .card { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; max-width: 450px; }
+            h1 { color: #e62b1e; margin-bottom: 0.5rem; font-size: 2rem; }
+            p { color: #666; line-height: 1.6; }
+            .status-container { margin: 1.5rem 0; padding: 0.75rem; background: #e7f5ea; border-radius: 8px; }
+            .status { color: #1e7e34; font-weight: 600; font-size: 0.9rem; }
+            code { background: #eee; padding: 0.2rem 0.4rem; border-radius: 4px; font-family: monospace; }
+            hr { border: 0; border-top: 1px solid #eee; margin: 1.5rem 0; }
+            .footer { font-size: 0.8rem; color: #999; }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <h1>TED Talk RAG 🎤</h1>
+            <p>Your Intelligent TED Assistant is officially live and running in the cloud.</p>
+            <div class="status-container">
+                <span class="status">● Systems Operational: Pinecone & LLMod Connected</span>
+            </div>
+            <hr>
+            <p>To interact with the RAG engine, send a <strong>POST</strong> request to:</p>
+            <code>/api/prompt</code>
+            <div style="margin-top: 2rem;" class="footer">
+                Developed as part of the Information Engineering Project
+            </div>
+        </div>
+    </body>
+    </html>
+    """
 def handle_prompt():
     data = request.json
     user_question = data.get("question")
