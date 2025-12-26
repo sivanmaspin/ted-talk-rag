@@ -4,8 +4,8 @@ This project implements a RAG system based on the TED Talks dataset. The system 
 
 ## Architecture
 - **Backend:** Flask (Python) deployed on Vercel.
-- **Vector Database:** Pinecone for efficient semantic search.
-- **LLM:** Integration with LLMod/OpenAI for generating context-aware responses.
+- **Vector Database:** Pinecone.
+- **LLM:** Integration with LLMod/OpenAI.
 
 ## Live Demo
 - **Deployment URL:** [https://ted-talk-rag-beta.vercel.app](https://ted-talk-rag-beta.vercel.app)
