@@ -28,7 +28,7 @@ def get_embedding(text):
 def get_stats():
     return jsonify(RAG_CONFIG)
 
-@app.route("/", methods=["POST"])
+@app.route("/api/prompt", methods=["POST"])
 def handle_prompt():
     data = request.json
     user_question = data.get("question")
