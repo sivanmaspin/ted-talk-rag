@@ -4,10 +4,6 @@
     {
       "source": "/api/prompt",
       "destination": "/api/index.py"
-    },
-    {
-      "source": "/",
-      "destination": "/index.html"
     }
   ]
 }
