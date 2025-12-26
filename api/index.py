@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from pinecone import Pinecone
 import requests
 
-# טעינת המפתחות מה-.env
 load_dotenv()
 
 app = Flask(__name__)
